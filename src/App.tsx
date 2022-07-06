@@ -25,7 +25,7 @@ const skillsArr = [
 
 const difficultyButtons = [
   { text: "简单", step: 1 },
-  { text: "一般", step: 1.5 },
+  { text: "一般", step: 2 },
   { text: "困难", step: 3 },
   { text: "地狱", step: 4 },
 ];
@@ -36,7 +36,7 @@ let count = 0;
 // 每帧移动的距离
 let step = 1;
 // 每个的高度
-const height = 80;
+const height = 72;
 // 盒子总高度
 const boxHeight = 400;
 
@@ -98,7 +98,7 @@ function App() {
 
     setTranslateY((prev) => prev - step);
 
-    const executeCount = Math.floor(height / step);
+    const executeCount = Math.round(height / step);
     if (count === executeCount) {
       count = 0;
       setStack((prev) => [
