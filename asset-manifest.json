@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/invoker-trainee/static/css/main.928db094.css",
+    "main.js": "/invoker-trainee/static/js/main.7fce0d79.js",
+    "static/js/787.995b2c30.chunk.js": "/invoker-trainee/static/js/787.995b2c30.chunk.js",
+    "static/media/bg.png": "/invoker-trainee/static/media/bg.e0ee40b0e4e7b04b2971.png",
+    "static/media/r.mpeg": "/invoker-trainee/static/media/r.8637f75f96468cd70ade.mpeg",
+    "static/media/qqe.mp3.mpeg": "/invoker-trainee/static/media/qqe.mp3.9739c0be90a1f8364f10.mpeg",
+    "static/media/qwe.mpeg": "/invoker-trainee/static/media/qwe.3d07efa1efbf87975534.mpeg",
+    "static/media/eee.mpeg": "/invoker-trainee/static/media/eee.395b88589ca6f12f4922.mpeg",
+    "static/media/eew.mpeg": "/invoker-trainee/static/media/eew.615c065092bcca6ad656.mpeg",
+    "static/media/www.mpeg": "/invoker-trainee/static/media/www.3a0db684748bbb4d9a6d.mpeg",
+    "static/media/qqq.mpeg": "/invoker-trainee/static/media/qqq.855c05b86b51e82108ab.mpeg",
+    "static/media/eeq.mpeg": "/invoker-trainee/static/media/eeq.d998dd03112804392b69.mpeg",
+    "static/media/wwe.mpeg": "/invoker-trainee/static/media/wwe.f7d24a47db20539ced93.mpeg",
+    "static/media/qqw.mpeg": "/invoker-trainee/static/media/qqw.3001dea7e7935ada5a7a.mpeg",
+    "static/media/wwq.mpeg": "/invoker-trainee/static/media/wwq.c6108d591c879e734a73.mpeg",
+    "static/media/w.webp": "/invoker-trainee/static/media/w.d29aae1879eee16ba995.webp",
+    "static/media/e.webp": "/invoker-trainee/static/media/e.d4510a468a6d826a9334.webp",
+    "static/media/r.webp": "/invoker-trainee/static/media/r.f59007a3a0acc16f448f.webp",
+    "static/media/eeq.webp": "/invoker-trainee/static/media/eeq.27d548aeceb4596e505c.webp",
+    "static/media/wwe.webp": "/invoker-trainee/static/media/wwe.d108d8083551c33321d1.webp",
+    "static/media/www.webp": "/invoker-trainee/static/media/www.fac2ff365917754ee1ae.webp",
+    "static/media/q.webp": "/invoker-trainee/static/media/q.87abd3c4f585b4632d41.webp",
+    "static/media/qqe.webp": "/invoker-trainee/static/media/qqe.077c286976d89ba0cdcb.webp",
+    "static/media/eew.webp": "/invoker-trainee/static/media/eew.d01c233a541b9b982ad4.webp",
+    "static/media/qqq.webp": "/invoker-trainee/static/media/qqq.2159fe9f568b18c9c845.webp",
+    "static/media/qqw.webp": "/invoker-trainee/static/media/qqw.213a1259385562ba5f02.webp",
+    "static/media/wwq.webp": "/invoker-trainee/static/media/wwq.0ae0ed3367a294007e43.webp",
+    "static/media/qwe.webp": "/invoker-trainee/static/media/qwe.6a1a10b42d2b1b87f72b.webp",
+    "static/media/eee.webp": "/invoker-trainee/static/media/eee.514b665ddc6a00c5bf8e.webp",
+    "index.html": "/invoker-trainee/index.html",
+    "main.928db094.css.map": "/invoker-trainee/static/css/main.928db094.css.map",
+    "main.7fce0d79.js.map": "/invoker-trainee/static/js/main.7fce0d79.js.map",
+    "787.995b2c30.chunk.js.map": "/invoker-trainee/static/js/787.995b2c30.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.928db094.css",
+    "static/js/main.7fce0d79.js"
+  ]
+}
