@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/invoker-trainee/static/css/main.928db094.css",
-    "main.js": "/invoker-trainee/static/js/main.7fce0d79.js",
+    "main.css": "/invoker-trainee/static/css/main.891ea655.css",
+    "main.js": "/invoker-trainee/static/js/main.38fb2f9e.js",
     "static/js/787.995b2c30.chunk.js": "/invoker-trainee/static/js/787.995b2c30.chunk.js",
     "static/media/bg.png": "/invoker-trainee/static/media/bg.e0ee40b0e4e7b04b2971.png",
     "static/media/r.mpeg": "/invoker-trainee/static/media/r.8637f75f96468cd70ade.mpeg",
@@ -30,12 +30,12 @@
     "static/media/qwe.webp": "/invoker-trainee/static/media/qwe.6a1a10b42d2b1b87f72b.webp",
     "static/media/eee.webp": "/invoker-trainee/static/media/eee.514b665ddc6a00c5bf8e.webp",
     "index.html": "/invoker-trainee/index.html",
-    "main.928db094.css.map": "/invoker-trainee/static/css/main.928db094.css.map",
-    "main.7fce0d79.js.map": "/invoker-trainee/static/js/main.7fce0d79.js.map",
+    "main.891ea655.css.map": "/invoker-trainee/static/css/main.891ea655.css.map",
+    "main.38fb2f9e.js.map": "/invoker-trainee/static/js/main.38fb2f9e.js.map",
     "787.995b2c30.chunk.js.map": "/invoker-trainee/static/js/787.995b2c30.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.928db094.css",
-    "static/js/main.7fce0d79.js"
+    "static/css/main.891ea655.css",
+    "static/js/main.38fb2f9e.js"
   ]
 }
