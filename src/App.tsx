@@ -124,6 +124,8 @@ function App() {
 
   const start = useCallback(() => {
     stop();
+    setScore(0);
+    setLost(0);
 
     const result = new Array(defaultNumber).fill("").map(() => ({
       index: Math.floor(Math.random() * 10),
