@@ -61,6 +61,11 @@
   border-radius: 50%;
 }
 
+.circle-small {
+  width: 53px;
+  height: 53px;
+}
+
 .help {
   position: absolute;
   top: 0;
