@@ -16,6 +16,13 @@
   align-items: center;
 }
 
+.github {
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  color: initial !important;
+}
+
 .title {
   font-size: 20px;
   font-weight: 600;
@@ -24,6 +31,7 @@
 .row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 

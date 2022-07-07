@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { nanoid } from "nanoid";
 import { isArrayEqual } from "./utils";
 import { Button, Switch } from "antd";
+import { GithubOutlined } from "@ant-design/icons";
 
 interface StackType {
   index: number;
@@ -138,6 +139,14 @@ function App() {
 
   return (
     <div className="App">
+      <a
+        href="https://github.com/linxianxi/invoker-trainee"
+        target="_blank"
+        className="github"
+        rel="noreferrer"
+      >
+        <GithubOutlined style={{ fontSize: 40 }} />
+      </a>
       <p className="title">卡尔练习生 invoker trainee</p>
       <div className="row">
         <Button.Group>
