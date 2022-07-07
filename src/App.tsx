@@ -156,7 +156,7 @@ function App() {
           break;
       }
 
-      if (isDotaKeyboard) {
+      if (isDotaKeyboard && shouldPressSkill) {
         const index = skillsArr.findIndex((i) => i.keyboard === e.key);
         if (index > -1) {
           const value = [...skillsArr[index].value];
