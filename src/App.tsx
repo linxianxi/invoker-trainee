@@ -25,29 +25,33 @@ const skillsArr = [
 
 const difficultyButtons = [
   { text: "简单", step: 1 },
-  { text: "一般", step: 2 },
-  { text: "困难", step: 3 },
-  { text: "地狱", step: 4 },
+  { text: "一般", step: 1.3 },
+  { text: "困难", step: 1.6 },
+  { text: "地狱", step: 2 },
 ];
 
 let requestAnimationFrameId: number | null = null;
 
-let count = 0;
 // 每帧移动的距离
 let step = 1;
 // 每个的高度
-const height = 72;
+const height = 80;
 // 盒子总高度
 const boxHeight = 400;
+const defaultNumber = boxHeight / 80 + 1;
+const defaultTranslateY = defaultNumber + boxHeight + height;
 
 function App() {
   const [stack, setStack] = useState<StackType[]>([]);
-  const [translateY, setTranslateY] = useState(height);
+  const [translateY, setTranslateY] = useState(defaultTranslateY);
   const [keys, setKeys] = useState(["", "", ""]);
   const boxRef = useRef<HTMLDivElement>(null);
   const [score, setScore] = useState(0);
   const [lost, setLost] = useState(0);
   const [enableHelp, setEnableHelp] = useState(false);
+
+  const translateYRef = useRef(translateY);
+  translateYRef.current = translateY;
 
   const onKeyUp = useCallback(
     (e: KeyboardEvent) => {
@@ -86,40 +90,31 @@ function App() {
   }, [onKeyUp]);
 
   const animate = useCallback(() => {
-    if ((boxRef.current?.scrollHeight || 0) >= boxHeight + height * 2) {
+    if (translateYRef.current <= 0) {
       setStack((prev) => {
         const last = prev[prev.length - 1];
         if (last.show) {
           setLost((pre) => pre + 1);
         }
-        return prev.slice(0, prev.length - 1);
+        return [
+          {
+            index: Math.floor(Math.random() * 10),
+            key: nanoid(),
+            translateX: Math.random() * 240,
+            show: true,
+          },
+          ...prev.slice(0, prev.length - 1),
+        ];
       });
+      setTranslateY((prev) => prev + height);
     }
 
     setTranslateY((prev) => prev - step);
 
-    const executeCount = Math.round(height / step);
-    if (count === executeCount) {
-      count = 0;
-      setStack((prev) => [
-        {
-          index: Math.floor(Math.random() * 10),
-          key: nanoid(),
-          translateX: Math.random() * 240,
-          show: true,
-        },
-        ...prev,
-      ]);
-      setTranslateY((prev) => prev + height);
-    }
-    count++;
     requestAnimationFrameId = requestAnimationFrame(animate);
   }, []);
 
-  const stop = useCallback((isPause?: boolean) => {
-    if (!isPause) {
-      count = 0;
-    }
+  const stop = useCallback(() => {
     if (requestAnimationFrameId !== null) {
       cancelAnimationFrame(requestAnimationFrameId);
       requestAnimationFrameId = null;
@@ -129,16 +124,14 @@ function App() {
   const start = useCallback(() => {
     stop();
 
-    const result = [
-      {
-        index: Math.floor(Math.random() * 10),
-        key: nanoid(),
-        translateX: Math.random() * 240,
-        show: true,
-      },
-    ];
+    const result = new Array(defaultNumber).fill("").map(() => ({
+      index: Math.floor(Math.random() * 10),
+      key: nanoid(),
+      translateX: Math.random() * 240,
+      show: true,
+    }));
     setStack(result);
-    setTranslateY(height);
+    setTranslateY(defaultTranslateY);
 
     animate();
   }, [animate, stop]);
@@ -165,7 +158,7 @@ function App() {
           danger
           style={{ marginInline: 10 }}
           onClick={() => {
-            requestAnimationFrameId ? stop(true) : animate();
+            requestAnimationFrameId ? stop() : animate();
           }}
         >
           暂停(恢复)
@@ -180,7 +173,7 @@ function App() {
         </span>
         <div className="box">
           <div
-            style={{ transform: `translateY(-${translateY}px)` }}
+            style={{ transform: `translateY(${-translateY}px)` }}
             ref={boxRef}
           >
             {stack.map((item) => {
