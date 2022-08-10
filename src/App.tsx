@@ -191,7 +191,7 @@ function App() {
   }, [onKeyUp]);
 
   const animate = useCallback(() => {
-    if (count - height / step >= 0) {
+    if (count - Math.floor(height / step) >= 0) {
       setStack((prev) => [
         {
           index: Math.floor(Math.random() * 10),
