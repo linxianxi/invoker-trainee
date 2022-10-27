@@ -190,7 +190,7 @@ function App() {
     };
   }, [onKeyUp]);
 
-  const animate = useCallback(() => {
+  const animate = useCallback((isFirst?: boolean) => {
     if (count - Math.floor(height / step) >= 0) {
       setStack((prev) => [
         {
@@ -206,18 +206,20 @@ function App() {
     }
     count++;
 
-    if ((boxRef.current?.scrollHeight || 0) > boxHeight + height) {
-      setStack((prev) => {
-        if (prev[prev.length - 1].show) {
-          setLost((pre) => pre + 1);
-        }
-        return prev.slice(0, prev.length - 1);
-      });
+    if (!isFirst) {
+      if ((boxRef.current?.scrollHeight || 0) > boxHeight + height) {
+        setStack((prev) => {
+          if (prev[prev.length - 1].show) {
+            setLost((pre) => pre + 1);
+          }
+          return prev.slice(0, prev.length - 1);
+        });
+      }
+
+      setTranslateY((prev) => prev - step);
     }
 
-    setTranslateY((prev) => prev - step);
-
-    requestAnimationFrameId = requestAnimationFrame(animate);
+    requestAnimationFrameId = requestAnimationFrame(() => animate());
   }, []);
 
   const stop = useCallback(() => {
@@ -244,7 +246,7 @@ function App() {
     setStack(result);
     setTranslateY(height);
 
-    animate();
+    animate(true);
   }, [animate, stop]);
 
   return (
